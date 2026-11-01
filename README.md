@@ -6,7 +6,7 @@ Uma pergunta chega à API; o serviço recupera trechos da equipe autorizada e po
 
 **Documento → trechos indexados → busca → resposta + evidências**
 
-O backend em TypeScript usa SQLite e oferece busca lexical ou semântica. Embeddings e geração podem ser feitos localmente pelo Ollama. O conteúdo da demonstração é fictício.
+O backend em TypeScript usa SQLite e oferece busca lexical ou semântica. No modo semântico, um **modelo de embeddings** representa os trechos para a busca; um **modelo de linguagem** pode gerar a resposta com as evidências encontradas. Ambos podem executar localmente pelo Ollama. O conteúdo da demonstração é fictício.
 
 ## Exemplo: pergunta com fonte
 
