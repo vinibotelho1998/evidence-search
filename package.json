@@ -1,0 +1,17 @@
+{
+  "name": "evidence-search",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Busca de documentos com isolamento por equipe, avaliação de recuperação e embeddings opcionais.",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node --env-file=.env src/server.ts",
+    "demo": "node scripts/demo.ts",
+    "evaluate": "node scripts/evaluate.ts",
+    "verify:ollama": "node scripts/verify-ollama.ts",
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": { "@types/node": "^24.0.0", "typescript": "^5.9.0" }
+}
