@@ -1,0 +1,27 @@
+Plano de commits — Evidence Search
+
+A sequencia abaixo organiza as mudancas do projeto em commits revisaveis.
+
+1. chore: configura execução e verificações em TypeScript
+   git add package.json package-lock.json tsconfig.json .gitignore .env.example
+   git commit -m "chore: configura execução e verificações em TypeScript"
+
+2. feat: adiciona armazenamento transacional e isolamento entre equipes
+   git add src/errors.ts src/text.ts src/store.ts
+   git commit -m "feat: adiciona armazenamento transacional e isolamento entre equipes"
+
+3. feat: implementa busca lexical e semântica com evidências
+   git add src/ollama.ts src/search.ts src/http.ts src/server.ts
+   git commit -m "feat: implementa busca lexical e semântica com evidências"
+
+4. test: avalia recuperação e verifica limites de autorização
+   git add test data scripts reports
+   git commit -m "test: avalia recuperação e verifica limites de autorização"
+
+5. docs: explica arquitetura e execução local com contêineres
+   Inclui capa, diagrama, capturas, GIF, painel HTML e metadados da execucao real.
+   git add README.md docs/architecture.md docs/ollama-integration.md docs/PRESENTATION.md docs/assets docs/demo COMMITS.txt Dockerfile .dockerignore .github LICENSE
+   git commit -m "docs: explica arquitetura e execução local com contêineres"
+
+Antes de publicar: npm ci; npm run typecheck; npm test; npm run evaluate
+Confira git status. Nao adicione .env, var/ ou node_modules/.

@@ -1,0 +1,36 @@
+{
+  "source": "Browser screenshots of the recorded API presentation; not AI-generated images.",
+  "capture_run_id": "fb64fcd462a34679bd6021d3d06c5e38",
+  "api_capture_started_at": "2026-10-27T12:53:34.158172+00:00",
+  "api_capture_finished_at": "2026-10-27T12:53:38.791357+00:00",
+  "encoded_at": "2026-10-27T13:04:10.061899+00:00",
+  "dimensions": [
+    1265,
+    730
+  ],
+  "frames": 3,
+  "timing": "Replay holds are for readability, not measured request duration.",
+  "source_record": "../demo/run.json",
+  "screenshot_sha256": "ed08f85a285fef5c221796456642dd6b4ce2a37587ebbd74d5c7af0218975099",
+  "gif_sha256": "aba9b04190b203fdee6a37df31a94da88efa173c6663d2c406c471e689ece1a7",
+  "steps": [
+    {
+      "id": "ingest",
+      "title": "Documento de demonstração indexado",
+      "hold_ms": 1800,
+      "frame_sha256": "65f4309b1ccd09943a1fe1b2f42ec10de6b7fefdd3f8f6fcf86e52bea536741d"
+    },
+    {
+      "id": "search",
+      "title": "Trechos recuperados",
+      "hold_ms": 1800,
+      "frame_sha256": "4c445398999af51651b3132c6517c67334d49b6dbeef26d27ab23d22b4bf5cf2"
+    },
+    {
+      "id": "answer",
+      "title": "Resposta gerada com fontes",
+      "hold_ms": 2800,
+      "frame_sha256": "ed08f85a285fef5c221796456642dd6b4ce2a37587ebbd74d5c7af0218975099"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "project": "04-evidence-search",
+  "run_id": "fb64fcd462a34679bd6021d3d06c5e38",
+  "kind": "synthetic_fixture",
+  "started_at": "2026-10-27T12:53:34.158172+00:00",
+  "status": "passed",
+  "base_url": "http://127.0.0.1:8004",
+  "data_provenance": {
+    "fixture": "Política fictícia e autoral; não é uma política comercial real.",
+    "models": "Embeddings e geração reais via Ollama; modelos configurados no Compose.",
+    "retention": "Documento demo-presentation-refund mantido na equipe de demonstração para exploração local."
+  },
+  "timing_note": "Observed wall time for one execution; not a performance benchmark.",
+  "credentials_saved": false,
+  "steps": [
+    {
+      "id": "ingest",
+      "title": "Documento de demonstração indexado",
+      "timestamp": "2026-10-27T12:53:34.158172+00:00",
+      "endpoint": "http://127.0.0.1:8004/v1/documents",
+      "method": "POST",
+      "request": {
+        "id": "demo-presentation-refund",
+        "title": "Política fictícia de reembolso — Projeto Farol Demo",
+        "source": "demo://presentation/refund-policy",
+        "text": "Documento fictício e autoral para demonstrar busca com fontes.\nNo Projeto Farol Demo, o prazo para solicitar reembolso é de 37 dias corridos após a compra.\nA equipe do Projeto Farol Demo responde ao pedido em até 2 dias úteis."
+      },
+      "status_code": 201,
+      "response": {
+        "documentId": "demo-presentation-refund",
+        "chunks": 1,
+        "mode": "semantic"
+      },
+      "duration_ms": 1090.798,
+      "status": "passed",
+      "checks": [
+        {
+          "name": "HTTP 201",
+          "passed": true
+        },
+        {
+          "name": "Indexação semântica real",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "title": "Trechos recuperados",
+      "timestamp": "2026-10-27T12:53:35.249033+00:00",
+      "endpoint": "http://127.0.0.1:8004/v1/search",
+      "method": "POST",
+      "request": {
+        "query": "Qual é o prazo, em dias corridos, para solicitar reembolso no Projeto Farol Demo?",
+        "topK": 3
+      },
+      "status_code": 200,
+      "response": {
+        "mode": "semantic",
+        "results": [
+          {
+            "chunkId": "demo-presentation-refund:0",
+            "documentId": "demo-presentation-refund",
+            "title": "Política fictícia de reembolso — Projeto Farol Demo",
+            "source": "demo://presentation/refund-policy",
+            "text": "Documento fictício e autoral para demonstrar busca com fontes.\nNo Projeto Farol Demo, o prazo para solicitar reembolso é de 37 dias corridos após a compra.\nA equipe do Projeto Farol Demo responde ao pedido em até 2 dias úteis.",
+            "startLine": 1,
+            "endLine": 3,
+            "score": 0.8484982640472344
+          }
+        ]
+      },
+      "duration_ms": 16.195,
+      "status": "passed",
+      "checks": [
+        {
+          "name": "HTTP 200",
+          "passed": true
+        },
+        {
+          "name": "Documento autoral recuperado",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "answer",
+      "title": "Resposta gerada com fontes",
+      "timestamp": "2026-10-27T12:53:35.265174+00:00",
+      "endpoint": "http://127.0.0.1:8004/v1/answer",
+      "method": "POST",
+      "request": {
+        "query": "Qual é o prazo, em dias corridos, para solicitar reembolso no Projeto Farol Demo?"
+      },
+      "status_code": 200,
+      "response": {
+        "answer": "37 dias corridos [demo-presentation-refund:0]",
+        "generated": true,
+        "reason": null,
+        "evidence": [
+          {
+            "chunkId": "demo-presentation-refund:0",
+            "documentId": "demo-presentation-refund",
+            "title": "Política fictícia de reembolso — Projeto Farol Demo",
+            "source": "demo://presentation/refund-policy",
+            "text": "Documento fictício e autoral para demonstrar busca com fontes.\nNo Projeto Farol Demo, o prazo para solicitar reembolso é de 37 dias corridos após a compra.\nA equipe do Projeto Farol Demo responde ao pedido em até 2 dias úteis.",
+            "startLine": 1,
+            "endLine": 3,
+            "score": 0.8484982640472344
+          }
+        ]
+      },
+      "duration_ms": 3525.55,
+      "status": "passed",
+      "checks": [
+        {
+          "name": "HTTP 200",
+          "passed": true
+        },
+        {
+          "name": "Geração real e prazo presente",
+          "passed": true
+        },
+        {
+          "name": "Citações válidas sustentadas pelo documento",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "mode": "semantic",
+    "document_id": "demo-presentation-refund",
+    "answer": "37 dias corridos [demo-presentation-refund:0]",
+    "generated": true,
+    "citation_count": 1,
+    "citations": [
+      "demo-presentation-refund:0"
+    ],
+    "evidence_count": 1,
+    "sources": [
+      {
+        "source": "demo://presentation/refund-policy",
+        "title": "Política fictícia de reembolso — Projeto Farol Demo",
+        "chunkId": "demo-presentation-refund:0",
+        "startLine": 1,
+        "endLine": 3
+      }
+    ]
+  },
+  "supporting_evidence": [],
+  "finished_at": "2026-10-27T12:53:38.791357+00:00"
+}
