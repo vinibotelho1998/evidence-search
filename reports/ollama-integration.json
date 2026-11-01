@@ -1,0 +1,60 @@
+{
+  "validation": "Three consecutive real Ollama integration runs against the corrected Docker API, same controlled fact with distinct random document IDs",
+  "passed": true,
+  "startedAt": "2026-10-27T03:57:36.623Z",
+  "finishedAt": "2026-10-27T03:57:51.039Z",
+  "models": {
+    "embedding": "embeddinggemma:300m",
+    "generation": "qwen2.5:1.5b"
+  },
+  "ollamaVersion": "0.40.11",
+  "runs": [
+    {
+      "report": "reports/ollama-integration-run-1.json",
+      "passed": true,
+      "fixtureId": "ollama-proof-3b64e360-8512-4d78-8f09-37a08c170178",
+      "embeddingDimensions": 768,
+      "retrievalScore": 0.8869821715363085,
+      "generationElapsedMs": 4086,
+      "answer": "37 dias corridos após a compra [ollama-proof-3b64e360-8512-4d78-8f09-37a08c170178:0]",
+      "citations": [
+        "ollama-proof-3b64e360-8512-4d78-8f09-37a08c170178:0"
+      ],
+      "stepsPassed": 7
+    },
+    {
+      "report": "reports/ollama-integration-run-2.json",
+      "passed": true,
+      "fixtureId": "ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91",
+      "embeddingDimensions": 768,
+      "retrievalScore": 0.8869821715363085,
+      "generationElapsedMs": 3193,
+      "answer": "37 dias corridos após a compra [ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91:0]",
+      "citations": [
+        "ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91:0"
+      ],
+      "stepsPassed": 7
+    },
+    {
+      "report": "reports/ollama-integration-run-3.json",
+      "passed": true,
+      "fixtureId": "ollama-proof-155b1161-78e3-4107-8d1b-73ac5fbd1654",
+      "embeddingDimensions": 768,
+      "retrievalScore": 0.8869821715363085,
+      "generationElapsedMs": 3204,
+      "answer": "37 dias corridos após a compra [ollama-proof-155b1161-78e3-4107-8d1b-73ac5fbd1654:0]",
+      "citations": [
+        "ollama-proof-155b1161-78e3-4107-8d1b-73ac5fbd1654:0"
+      ],
+      "stepsPassed": 7
+    }
+  ],
+  "totalRuns": 3,
+  "passedRuns": 3,
+  "totalPassedSteps": 21,
+  "previousFailureReports": [
+    "reports/ollama-integration-before-citation-fix.json",
+    "reports/ollama-integration-after-prompt-only-fix.json"
+  ],
+  "limitation": "Controlled integration reliability check, not a general retrieval or factual-grounding benchmark."
+}

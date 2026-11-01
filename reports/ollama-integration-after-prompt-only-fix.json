@@ -1,0 +1,82 @@
+{
+  "startedAt": "2026-10-27T03:53:52.679Z",
+  "validation": "real Ollama and real Evidence Search HTTP API",
+  "models": {
+    "embedding": "embeddinggemma:300m",
+    "generation": "qwen2.5:1.5b"
+  },
+  "fixture": {
+    "id": "ollama-proof-419cbdde-8f9b-47c0-bbb0-ae7e29969ffa",
+    "expectedDays": 37
+  },
+  "steps": [
+    {
+      "name": "model-preflight",
+      "elapsedMs": 25,
+      "details": {
+        "version": "0.40.11",
+        "embeddingCapabilities": [
+          "embedding"
+        ],
+        "generationCapabilities": [
+          "completion",
+          "tools"
+        ]
+      }
+    },
+    {
+      "name": "real-embedding-batch",
+      "elapsedMs": 889,
+      "details": {
+        "model": "embeddinggemma:300m",
+        "dimensions": 768,
+        "promptTokens": 68,
+        "totalDurationNs": 879013684
+      }
+    },
+    {
+      "name": "semantic-api-ready",
+      "elapsedMs": 3,
+      "details": {
+        "status": "ok",
+        "mode": "semantic"
+      }
+    },
+    {
+      "name": "ingest-real-embeddings",
+      "elapsedMs": 46,
+      "details": {
+        "documentId": "ollama-proof-419cbdde-8f9b-47c0-bbb0-ae7e29969ffa",
+        "chunks": 1,
+        "mode": "semantic"
+      }
+    },
+    {
+      "name": "semantic-retrieval-and-tenant-isolation",
+      "elapsedMs": 41,
+      "details": {
+        "retrieved": {
+          "chunkId": "ollama-proof-419cbdde-8f9b-47c0-bbb0-ae7e29969ffa:0",
+          "documentId": "ollama-proof-419cbdde-8f9b-47c0-bbb0-ae7e29969ffa",
+          "title": "Política fictícia Atlas-N9",
+          "source": "integration-fixture/atlas-n9.md",
+          "text": "O serviço Atlas-N9 aceita pedidos de reembolso em até 37 dias corridos após a compra.\nO comprovante de pagamento é obrigatório.\nA solicitação deve ser enviada pelo portal de atendimento.",
+          "startLine": 1,
+          "endLine": 3,
+          "score": 0.8869821715363085
+        },
+        "otherTenantReturnedFixture": false
+      }
+    },
+    {
+      "name": "cleanup-owned-fixture",
+      "elapsedMs": 18,
+      "details": {
+        "deleted": true
+      }
+    }
+  ],
+  "passed": false,
+  "error": "/v1/answer: HTTP 502: {\"error\":{\"code\":\"invalid_citations\",\"message\":\"O modelo retornou citacoes ausentes ou fora das evidencias recuperadas.\",\"requestId\":\"2f41e0f0-e075-46f9-8ef4-b63856b74a16\"}}",
+  "finishedAt": "2026-10-27T03:53:55.513Z"
+}

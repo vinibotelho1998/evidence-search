@@ -1,0 +1,103 @@
+{
+  "startedAt": "2026-10-27T03:57:42.209Z",
+  "validation": "real Ollama and real Evidence Search HTTP API",
+  "models": {
+    "embedding": "embeddinggemma:300m",
+    "generation": "qwen2.5:1.5b"
+  },
+  "fixture": {
+    "id": "ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91",
+    "expectedDays": 37
+  },
+  "steps": [
+    {
+      "name": "model-preflight",
+      "elapsedMs": 34,
+      "details": {
+        "version": "0.40.11",
+        "embeddingCapabilities": [
+          "embedding"
+        ],
+        "generationCapabilities": [
+          "completion",
+          "tools"
+        ]
+      }
+    },
+    {
+      "name": "real-embedding-batch",
+      "elapsedMs": 903,
+      "details": {
+        "model": "embeddinggemma:300m",
+        "dimensions": 768,
+        "promptTokens": 68,
+        "totalDurationNs": 887229451
+      }
+    },
+    {
+      "name": "semantic-api-ready",
+      "elapsedMs": 3,
+      "details": {
+        "status": "ok",
+        "mode": "semantic"
+      }
+    },
+    {
+      "name": "ingest-real-embeddings",
+      "elapsedMs": 25,
+      "details": {
+        "documentId": "ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91",
+        "chunks": 1,
+        "mode": "semantic"
+      }
+    },
+    {
+      "name": "semantic-retrieval-and-tenant-isolation",
+      "elapsedMs": 23,
+      "details": {
+        "retrieved": {
+          "chunkId": "ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91:0",
+          "documentId": "ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91",
+          "title": "Política fictícia Atlas-N9",
+          "source": "integration-fixture/atlas-n9.md",
+          "text": "O serviço Atlas-N9 aceita pedidos de reembolso em até 37 dias corridos após a compra.\nO comprovante de pagamento é obrigatório.\nA solicitação deve ser enviada pelo portal de atendimento.",
+          "startLine": 1,
+          "endLine": 3,
+          "score": 0.8869821715363085
+        },
+        "otherTenantReturnedFixture": false
+      }
+    },
+    {
+      "name": "real-generation-with-supported-citations",
+      "elapsedMs": 3193,
+      "details": {
+        "answer": "37 dias corridos após a compra [ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91:0]",
+        "citations": [
+          "ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91:0"
+        ],
+        "evidence": [
+          {
+            "chunkId": "ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91:0",
+            "documentId": "ollama-proof-c7159791-1141-4248-b079-a140d7e4ae91",
+            "title": "Política fictícia Atlas-N9",
+            "source": "integration-fixture/atlas-n9.md",
+            "text": "O serviço Atlas-N9 aceita pedidos de reembolso em até 37 dias corridos após a compra.\nO comprovante de pagamento é obrigatório.\nA solicitação deve ser enviada pelo portal de atendimento.",
+            "startLine": 1,
+            "endLine": 3,
+            "score": 0.8869821715363085
+          }
+        ]
+      }
+    },
+    {
+      "name": "cleanup-owned-fixture",
+      "elapsedMs": 41,
+      "details": {
+        "deleted": true
+      }
+    }
+  ],
+  "passed": true,
+  "finishedAt": "2026-10-27T03:57:46.432Z"
+}

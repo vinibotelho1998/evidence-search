@@ -1,0 +1,14 @@
+[
+  {"query":"qual o prazo para solicitar reembolso","relevantDocument":"reembolso"},
+  {"query":"quando ocorre pagamento das despesas aprovadas","relevantDocument":"reembolso"},
+  {"query":"como recuperar minha senha de login","relevantDocument":"acesso"},
+  {"query":"por quanto tempo o link de redefinicao funciona","relevantDocument":"acesso"},
+  {"query":"qual o horario do backup do banco","relevantDocument":"backup"},
+  {"query":"quem pode solicitar restauracao das copias","relevantDocument":"backup"},
+  {"query":"quantos dias de antecedencia para ferias","relevantDocument":"ferias"},
+  {"query":"quem confirma meu pedido de ferias","relevantDocument":"ferias"},
+  {"query":"prazo primeiro retorno de incidentes criticos","relevantDocument":"incidentes"},
+  {"query":"publicacao do relatorio de causa raiz","relevantDocument":"incidentes"},
+  {"query":"retencao dos logs de acesso","relevantDocument":"retencao"},
+  {"query":"quanto tempo ficam os registros administrativos","relevantDocument":"retencao"}
+]

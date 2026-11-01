@@ -1,0 +1,8 @@
+[
+  {"id":"reembolso","title":"Politica de reembolso","source":"manual-ficticio/reembolso.md","text":"Reembolsos de despesas devem ser solicitados em ate 30 dias.\nO colaborador precisa anexar o comprovante e informar o centro de custo.\nO pagamento ocorre em ate 10 dias uteis depois da aprovacao."},
+  {"id":"acesso","title":"Recuperacao de acesso","source":"manual-ficticio/acesso.md","text":"Para recuperar a senha, selecione Esqueci minha senha na tela de login.\nO link de redefinicao expira em 20 minutos.\nSe o email nao chegar, verifique o spam e procure o suporte."},
+  {"id":"backup","title":"Backups de dados","source":"manual-ficticio/backup.md","text":"O backup completo do banco acontece diariamente as 02h UTC.\nAs copias ficam armazenadas por 14 dias.\nA restauracao deve ser solicitada ao time de plataforma."},
+  {"id":"ferias","title":"Solicitacao de ferias","source":"manual-ficticio/ferias.md","text":"O pedido de ferias deve ser enviado ao gestor com 45 dias de antecedencia.\nO gestor avalia a disponibilidade da equipe.\nA confirmacao e registrada pelo departamento de pessoas."},
+  {"id":"incidentes","title":"Atendimento de incidentes","source":"manual-ficticio/incidentes.md","text":"Incidentes criticos sao atendidos pelo plantao de engenharia.\nO primeiro retorno deve ocorrer em ate 15 minutos.\nO relatorio de causa raiz e publicado em ate cinco dias uteis."},
+  {"id":"retencao","title":"Retencao de registros","source":"manual-ficticio/retencao.md","text":"Os logs de acesso ficam retidos por 90 dias.\nRegistros de auditoria administrativa ficam armazenados por um ano.\nA exclusao de registros segue o calendario de retencao definido pela equipe."}
+]

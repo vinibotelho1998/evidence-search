@@ -1,0 +1,119 @@
+{
+  "corpus": "manual ficticio autoral; 6 documentos / 12 perguntas",
+  "mode": "lexical",
+  "embeddingModel": null,
+  "recallAt3": 0.9166666666666666,
+  "meanReciprocalRankAt3": 0.9166666666666666,
+  "warning": "Conjunto pequeno escrito junto ao corpus: smoke benchmark, nao prova generalizacao. Geracao nao avaliada.",
+  "cases": [
+    {
+      "query": "qual o prazo para solicitar reembolso",
+      "relevantDocument": "reembolso",
+      "retrieved": [],
+      "rank": 0,
+      "latencyMs": 0.6424999999999983
+    },
+    {
+      "query": "quando ocorre pagamento das despesas aprovadas",
+      "relevantDocument": "reembolso",
+      "retrieved": [
+        "reembolso"
+      ],
+      "rank": 1,
+      "latencyMs": 0.16560000000000485
+    },
+    {
+      "query": "como recuperar minha senha de login",
+      "relevantDocument": "acesso",
+      "retrieved": [
+        "acesso"
+      ],
+      "rank": 1,
+      "latencyMs": 0.09029999999999916
+    },
+    {
+      "query": "por quanto tempo o link de redefinicao funciona",
+      "relevantDocument": "acesso",
+      "retrieved": [
+        "acesso"
+      ],
+      "rank": 1,
+      "latencyMs": 0.0625
+    },
+    {
+      "query": "qual o horario do backup do banco",
+      "relevantDocument": "backup",
+      "retrieved": [
+        "backup"
+      ],
+      "rank": 1,
+      "latencyMs": 0.05129999999999768
+    },
+    {
+      "query": "quem pode solicitar restauracao das copias",
+      "relevantDocument": "backup",
+      "retrieved": [
+        "backup"
+      ],
+      "rank": 1,
+      "latencyMs": 0.0478999999999985
+    },
+    {
+      "query": "quantos dias de antecedencia para ferias",
+      "relevantDocument": "ferias",
+      "retrieved": [
+        "ferias",
+        "reembolso",
+        "backup"
+      ],
+      "rank": 1,
+      "latencyMs": 0.052300000000002456
+    },
+    {
+      "query": "quem confirma meu pedido de ferias",
+      "relevantDocument": "ferias",
+      "retrieved": [
+        "ferias"
+      ],
+      "rank": 1,
+      "latencyMs": 0.04579999999999984
+    },
+    {
+      "query": "prazo primeiro retorno de incidentes criticos",
+      "relevantDocument": "incidentes",
+      "retrieved": [
+        "incidentes"
+      ],
+      "rank": 1,
+      "latencyMs": 0.05390000000000583
+    },
+    {
+      "query": "publicacao do relatorio de causa raiz",
+      "relevantDocument": "incidentes",
+      "retrieved": [
+        "incidentes"
+      ],
+      "rank": 1,
+      "latencyMs": 0.053300000000000125
+    },
+    {
+      "query": "retencao dos logs de acesso",
+      "relevantDocument": "retencao",
+      "retrieved": [
+        "retencao"
+      ],
+      "rank": 1,
+      "latencyMs": 0.038699999999998624
+    },
+    {
+      "query": "quanto tempo ficam os registros administrativos",
+      "relevantDocument": "retencao",
+      "retrieved": [
+        "retencao",
+        "backup"
+      ],
+      "rank": 1,
+      "latencyMs": 0.04639999999999844
+    }
+  ]
+}
